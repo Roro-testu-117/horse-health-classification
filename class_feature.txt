@@ -1,0 +1,352 @@
+モデル1（params_cat1）の特徴量重要度
+・diedクラス（死亡）
+total_protein（平均重要度 0.294）
+lesion_1_encoded（0.267）
+pain（0.248）
+nasogastric_reflux_ph（0.187）
+abdomo_protein（0.101）
+
+・euthanizedクラス（安楽死）
+total_protein（0.247）
+nasogastric_reflux_ph（0.204）
+abdomo_protein（0.146）
+lesion_1_encoded（0.112）
+surgery（0.060）
+
+・livedクラス（生存）
+lesion_1_encoded（0.398）
+pain（0.299）
+hospital_number_encoded（0.172）
+pulse（0.145）
+abdomo_appearance（0.088）
+
+モデル2（params_cat2）の特徴量重要度
+・diedクラス（死亡）
+total_protein（平均重要度 0.346）
+lesion_1_encoded（0.284）
+pain（0.253）
+nasogastric_reflux_ph（0.142）
+abdomo_protein（0.181）
+
+・euthanizedクラス（安楽死）
+nasogastric_reflux_ph（0.232）
+total_protein（0.223）
+abdomo_protein（0.169）
+surgery（0.154）
+lesion_1_encoded（0.142）
+
+・livedクラス（生存）
+lesion_1_encoded（0.413）
+pain（0.313）
+hospital_number_encoded（0.178）
+pulse（0.155）
+abdomo_appearance（0.137）
+
+****************************************
+【CatBoost モデル1】
+
+=== Fold 0 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.357328
+28       lesion_1_encoded    0.315170
+10                   pain    0.312147
+15  nasogastric_reflux_ph    0.187256
+16      rectal_exam_feces    0.181308
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.274956
+15  nasogastric_reflux_ph    0.199806
+28       lesion_1_encoded    0.156791
+21         abdomo_protein    0.148640
+18     packed_cell_volume    0.125576
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.452692
+10                     pain    0.395542
+27  hospital_number_encoded    0.206609
+18       packed_cell_volume    0.135996
+4                     pulse    0.132179
+=== Fold 1 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.258756
+10                   pain    0.247893
+28       lesion_1_encoded    0.216070
+15  nasogastric_reflux_ph    0.187552
+21         abdomo_protein    0.176777
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.231478
+15  nasogastric_reflux_ph    0.229898
+21         abdomo_protein    0.147339
+28       lesion_1_encoded    0.140086
+18     packed_cell_volume    0.096239
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.354319
+10                     pain    0.297980
+20        abdomo_appearance    0.150563
+4                     pulse    0.135706
+27  hospital_number_encoded    0.125778
+=== Fold 2 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.304805
+28       lesion_1_encoded    0.283437
+10                   pain    0.230441
+15  nasogastric_reflux_ph    0.174911
+16      rectal_exam_feces    0.131503
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.266242
+15  nasogastric_reflux_ph    0.161512
+2         hospital_number    0.129556
+21         abdomo_protein    0.126350
+28       lesion_1_encoded    0.116734
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.396573
+10                     pain    0.264107
+4                     pulse    0.183480
+27  hospital_number_encoded    0.134143
+20        abdomo_appearance    0.094974
+=== Fold 3 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+                  feature  importance
+28       lesion_1_encoded    0.272553
+19          total_protein    0.258318
+10                   pain    0.214886
+15  nasogastric_reflux_ph    0.175233
+21         abdomo_protein    0.169240
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.226491
+15  nasogastric_reflux_ph    0.177431
+0                 surgery    0.160985
+14     nasogastric_reflux    0.154302
+21         abdomo_protein    0.137511
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.394461
+10                     pain    0.258178
+20        abdomo_appearance    0.195002
+27  hospital_number_encoded    0.184464
+4                     pulse    0.145057
+=== Fold 4 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.291555
+28       lesion_1_encoded    0.248280
+10                   pain    0.234413
+15  nasogastric_reflux_ph    0.209108
+21         abdomo_protein    0.159934
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+                  feature  importance
+15  nasogastric_reflux_ph    0.253502
+19          total_protein    0.234081
+21         abdomo_protein    0.168210
+28       lesion_1_encoded    0.146991
+0                 surgery    0.140566
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.393434
+10                     pain    0.280640
+27  hospital_number_encoded    0.208493
+9     capillary_refill_time    0.136845
+4                     pulse    0.128304
+
+***************************
+【CatBoost モデル2】
+
+=== Fold 0 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.406218
+10                   pain    0.303239
+28       lesion_1_encoded    0.289439
+16      rectal_exam_feces    0.181172
+15  nasogastric_reflux_ph    0.163285
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.292719
+28       lesion_1_encoded    0.184598
+15  nasogastric_reflux_ph    0.178319
+21         abdomo_protein    0.161181
+23               lesion_1    0.153896
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.467107
+10                     pain    0.397112
+27  hospital_number_encoded    0.212754
+18       packed_cell_volume    0.144364
+4                     pulse    0.135546
+=== Fold 1 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.314614
+10                   pain    0.252018
+28       lesion_1_encoded    0.221469
+21         abdomo_protein    0.211744
+15  nasogastric_reflux_ph    0.136564
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.259951
+15  nasogastric_reflux_ph    0.195987
+21         abdomo_protein    0.191678
+28       lesion_1_encoded    0.158399
+0                 surgery    0.139568
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.379006
+10                     pain    0.296342
+4                     pulse    0.139584
+20        abdomo_appearance    0.139194
+27  hospital_number_encoded    0.132204
+=== Fold 2 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.392120
+28       lesion_1_encoded    0.292748
+10                   pain    0.242501
+16      rectal_exam_feces    0.136546
+15  nasogastric_reflux_ph    0.135459
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.293114
+0                 surgery    0.188012
+2         hospital_number    0.170555
+15  nasogastric_reflux_ph    0.148845
+21         abdomo_protein    0.147579
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.437148
+10                     pain    0.267800
+4                     pulse    0.206585
+27  hospital_number_encoded    0.138726
+20        abdomo_appearance    0.117697
+=== Fold 3 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+             feature  importance
+19     total_protein    0.322949
+28  lesion_1_encoded    0.303061
+10              pain    0.241831
+21    abdomo_protein    0.198268
+2    hospital_number    0.179441
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+               feature  importance
+19       total_protein    0.239781
+0              surgery    0.220386
+2      hospital_number    0.176423
+21      abdomo_protein    0.169152
+14  nasogastric_reflux    0.168704
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.436450
+10                     pain    0.276430
+20        abdomo_appearance    0.212203
+27  hospital_number_encoded    0.211389
+4                     pulse    0.168296
+=== Fold 4 のSHAP分析 ===
+SHAP値の形状: (3, 247, 29)
+fold_dataの形状: (247, 29)
+特徴量数: 29
+重要度数: (29,)
+diedクラスの上位5特徴量:
+                  feature  importance
+19          total_protein    0.297095
+15  nasogastric_reflux_ph    0.232341
+10                   pain    0.230460
+28       lesion_1_encoded    0.215699
+21         abdomo_protein    0.158563
+特徴量数: 29
+重要度数: (29,)
+euthanizedクラスの上位5特徴量:
+                  feature  importance
+15  nasogastric_reflux_ph    0.269473
+19          total_protein    0.231041
+21         abdomo_protein    0.176415
+0                 surgery    0.160428
+28       lesion_1_encoded    0.133986
+特徴量数: 29
+重要度数: (29,)
+livedクラスの上位5特徴量:
+                    feature  importance
+28         lesion_1_encoded    0.349684
+10                     pain    0.288750
+27  hospital_number_encoded    0.195891
+9     capillary_refill_time    0.131502
+4                     pulse    0.126981
+
